@@ -12,18 +12,6 @@ import scala.reflect.ClassTag
 
 object MongoUtils {
 
-  //test
-  //预生产 mongoDB
-  //地址：192.168.1.13:27017
-  //账号：admin
-  //密码：Y7s2m7YcxyNHOqGets3vevVn3GePklyj
- // private[mongo] val mongo_url="mongodb://ncfsadmin:7*FI9uwSNOHpFytF@ncfsnew.cluster-cq2xk0idireq.ap-south-1.docdb.amazonaws.com:27017"
-
-
-
-
-
-
   val DefaultMaxBatchSize = 100000
 
   def insertSave[D: ClassTag](rdd: RDD[InsertOneModel[Document]]): Unit = insertSave(rdd, WriteConfig(rdd.sparkContext))
